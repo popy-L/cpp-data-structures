@@ -16,7 +16,7 @@ int main() {
    for(int i=0;i<3;i++){
     InsertHead(head,i);
    }
-Node* p=head;
+Node* p=head;      //遍历输出
 while(p!=nullptr){
     cout<<p->data<<endl;
     p=p->next;
