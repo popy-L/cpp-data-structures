@@ -1,26 +1,20 @@
-#include <iostream>
-using namespace std;
-struct Node {
-    int data;
-    Node*next;
-};
+void InsertTail(Node*& head, int value) {
+    Node* p = new Node;
+    p->data = value;
+    p->next = nullptr;   // 新节点是尾巴，所以 next 必须指向 nullptr！
 
-void InsertHead(Node*&head,int value) {
-    Node* p=new Node;
-    p->data=value;
-    p->next=head;
-    head=p;
+    // TODO: 补全下面代码
+    
+    // 1. 如果链表为空，直接让 head = p
+    if(head==nullptr){
+        head=p;
+    }
+    // 2. 否则，找到最后一个节点，把 p 挂上去
+    else{
+        Node* tem=head;
+        while(tem->next!=nullptr){
+            tem=tem->next;
+        }
+        tem->next = p
+    }
 }
-int main() {
-   Node* head=nullptr;
-   for(int i=0;i<3;i++){
-    InsertHead(head,i);
-   }
-Node* p=head;
-while(p!=nullptr){
-    cout<<p->data<<endl;
-    p=p->next;
-}
-tem->next = p
-};
-
